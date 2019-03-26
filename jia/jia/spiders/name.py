@@ -21,11 +21,11 @@ class NameSpider(RedisSpider):
         #connect redis
         self.redis_pool = redis.StrictRedis(host=settings['REDIS_HOST'], port=settings['REDIS_PORT'],password=settings['REDIS_PASSWORD'], db=settings['REDIS_DB'],decode_responses=True)
 
+    #改写scrapy-redis抓取url
     def make_request_from_data(self,data):
         url = "https://api2.tianyancha.com/services/v3/search/sNorV2/%s?pageSize=100&pageNum=1&sortType=0"%quote(str(data,encoding='utf-8'))
         # return self.make_requests_from_url(url)
         return scrapy.Request(url=url,callback=self.parse,dont_filter=True)
-
 
     def parse(self, response):
         item = JiaItem()
