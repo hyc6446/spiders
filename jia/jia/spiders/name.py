@@ -28,27 +28,6 @@ class NameSpider(RedisSpider):
 
 
     def parse(self, response):
-        print(response.text)
-        # res_text = response.xpath("//div[@class='pd']//a[position()>50]/@href").extract()
-        # for name in res_text:
-        #     for i in range(1,2):
-        #         url = "http://www.jia12.com/XingmingKu/%s-%s.html"%(name.split("-")[0],i)
-        #         yield scrapy.Request(url,callback=self.parse_content)
-                # break
-            # break
-
-    def parse_content(self,response):
-        allnames = response.css("table#xingmingkuTableID a::text").extract()
-        for name in allnames:
-            self.redis_pool.sadd("test",name)
-            # break
-        #     if not self.redis_pool.sismember("hasname",name):
-        #         url = "https://api2.tianyancha.com/services/v3/search/sNorV2/%s?pageSize=100&pageNum=1&sortType=0"%quote(name)
-        #         yield scrapy.Request(url,callback=self.companyList,meta={'cname':name})
-        #         # break
-
-
-    def companyList(self,response):
         item = JiaItem()
         if response.status == 200:
             json_data = json.loads(response.text)
@@ -61,8 +40,6 @@ class NameSpider(RedisSpider):
                             if not self.redis_pool.sismember("hasid", info['id']):
                                 item['cid'] = info['id']
                                 item['name'] = remove_tags(info['name'])
-                                item['cname'] = response.meta['cname']
-                                print(response.meta['cname'])
                                 yield item
                 else:
                     print(state)
