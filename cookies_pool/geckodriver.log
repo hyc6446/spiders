@@ -1,0 +1,64 @@
+1544259035486	mozrunner::runner	INFO	Running command: "D:\\应用软件\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\HESHOU~1\\AppData\\Local\\Temp\\rust_mozprofile.3RVVbcwXpMvw"
+1544259042927	Marionette	INFO	Listening on port 64956
+1544259043249	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.tianyancha.com/login?from=https://www.tianyancha.com/search, line 1: ReferenceError: changeCurrent is not defined
+1544259050364	Marionette	INFO	Stopped listening on port 64956
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+[Child 4856, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 6068, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[GPU 13776, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1544259092886	mozrunner::runner	INFO	Running command: "D:\\应用软件\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\HESHOU~1\\AppData\\Local\\Temp\\rust_mozprofile.oHM6OEH8YBQ4"
+1544259097584	Marionette	INFO	Listening on port 65101
+1544259097873	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-123487620-1, line 87: unreachable code after return statement
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-123487620-1, line 147: unreachable code after return statement
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-123487620-1, line 147: unreachable code after return statement
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-123487620-1, line 147: unreachable code after return statement
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-123487620-1, line 87: unreachable code after return statement
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-123487620-1, line 147: unreachable code after return statement
+JavaScript error: https://www.tianyancha.com/login?from=https://www.tianyancha.com/search, line 1: ReferenceError: changeCurrent is not defined
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-123487620-1, line 87: unreachable code after return statement
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-123487620-1, line 147: unreachable code after return statement
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-123487620-1, line 147: unreachable code after return statement
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-123487620-1, line 147: unreachable code after return statement
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-123487620-1, line 87: unreachable code after return statement
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-123487620-1, line 147: unreachable code after return statement
+1544259112568	Marionette	INFO	Stopped listening on port 65101
+[Parent 17160, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 600, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 600, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+JavaScript error: jar:file:///D:/%E5%BA%94%E7%94%A8%E8%BD%AF%E4%BB%B6/omni.ja!/components/nsUrlClassifierListManager.js, line 597: TypeError: this.tablesData[table] is undefined
+[Parent 17160, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 15528, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 15528, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[GPU 10516, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1544259399042	mozrunner::runner	INFO	Running command: "D:\\应用软件\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\HESHOU~1\\AppData\\Local\\Temp\\rust_mozprofile.8jF8sQ5EePrr"
+[Parent 15752, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 3788, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 3788, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1544259414800	Marionette	INFO	Listening on port 49351
+1544259414843	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.tianyancha.com/login?from=https://www.tianyancha.com/search, line 1: ReferenceError: changeCurrent is not defined
+1544259446621	Marionette	INFO	Stopped listening on port 49351
+[Child 6388, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 6340, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[Parent 15752, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1544259516307	mozrunner::runner	INFO	Running command: "D:\\应用软件\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\HESHOU~1\\AppData\\Local\\Temp\\rust_mozprofile.yV0qdb4fvvuT"
+1544259722057	mozrunner::runner	INFO	Running command: "D:\\应用软件\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\HESHOU~1\\AppData\\Local\\Temp\\rust_mozprofile.VHVHlOtBTYIn"
+1544260122366	mozrunner::runner	INFO	Running command: "D:\\应用软件\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\HESHOU~1\\AppData\\Local\\Temp\\rust_mozprofile.qu2rK8wc2v8E"
+1544261266825	mozrunner::runner	INFO	Running command: "D:\\应用软件\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\HESHOU~1\\AppData\\Local\\Temp\\rust_mozprofile.RfXxuGGkaUuy"
