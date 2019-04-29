@@ -12,8 +12,10 @@ class QiyemuluItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
     # pass
+
     #搜索人员名称
     cname = scrapy.Field()
+
     #公司ID
     companyId = scrapy.Field()
     #公司名称
@@ -68,6 +70,8 @@ class QiyemuluItem(scrapy.Item):
     regInstitute = scrapy.Field()
     #公司logo地址
     logo = scrapy.Field()
+    #公司logo地址
+    portray = scrapy.Field()
     #最新更新时间
     updatetime = scrapy.Field()
     #经营范围
@@ -78,4 +82,8 @@ class QiyemuluItem(scrapy.Item):
     base = scrapy.Field()
     #所属区域简称
     district = scrapy.Field()
+
+
+    #/*   维度信息    */
+    allInfo = scrapy.Field()
 

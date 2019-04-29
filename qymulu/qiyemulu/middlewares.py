@@ -49,7 +49,7 @@ class AuthorizationMiddleware(object):
         self.REDIS_PORT = REDIS_PORT
         self.REDIS_PASSWORD = REDIS_PASSWORD
         self.REDIS_DB = REDIS_DB
-        self.redis_pool = redis.StrictRedis(host=self.REDIS_HOST, port=self.REDIS_PORT, password=self.REDIS_PASSWORD,db=2, decode_responses=True)
+        self.redis_pool = redis.StrictRedis(host=self.REDIS_HOST, port=self.REDIS_PORT, password=self.REDIS_PASSWORD,db=self.REDIS_DB, decode_responses=True)
     @classmethod
     def from_crawler(cls, crawler):
         settings = crawler.settings

@@ -42,13 +42,29 @@ class QiyemuluPipeline(object):
     def do_insert(self,cursor,item):
         #企业基本信息
         # VALUES = (item['companyId'],item['companyName'])
-        if not self.redis_pool.sismember("companyid", item['companyId']):
-            insert_sql = "INSERT IGNORE  INTO tyc_baseinfo(companyId,companyName,alias,historyNames,legalPersonName,phoneList,emailList,websiteList,estiblishTime,regNumber,regCapital,actualCapital,creditCode,taxNumber,orgNumber,taxQualification,englishName,regStatus,staffNumRange,socialStaffNum,companyOrgType,industry,operatingPeriod,regLocation,approvedTime,regInstitute,logo,updatetime,businessScope,intro,base,district) VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
-            VALUES = (item['companyId'],item['companyName'],item['alias'],item['historyNames'],item['legalPersonName'],item['phoneList'],item['emailList'],item['websiteList'],item['estiblishTime'],item['regNumber'],item['regCapital'],item['actualCapital'],item['creditCode'],item['taxNumber'],item['orgNumber'],item['taxQualification'],item['englishName'],item['regStatus'],item['staffNumRange'],item['socialStaffNum'],item['companyOrgType'],item['industry'],item['operatingPeriod'],item['regLocation'],item['approvedTime'],item['regInstitute'],item['logo'],item['updatetime'],item['businessScope'],item['intro'],item['base'],item['district'])         # insert_sql = "INSERT INTO names(cid,name) VALUES(%s,%s)"
-            if cursor.execute(insert_sql, VALUES):
-                # self.redis_pool.sadd("companyid", item['companyId'])
-                self.redis_pool.smove("hasid","companyid",item['companyId'])
-                print(item['companyName'],"基本信息执行成功")
+        # insert_sql = "INSERT IGNORE INTO tyc_baseinfo(companyId,companyName,alias,historyNames,legalPersonName,phoneList,emailList,websiteList,estiblishTime,regNumber,regCapital,actualCapital,creditCode,taxNumber,orgNumber,taxQualification,englishName,regStatus,staffNumRange,socialStaffNum,companyOrgType,industry,operatingPeriod,regLocation,approvedTime,regInstitute,logo,portray,updatetime,businessScope,intro,base,district) VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
+        # VALUES = (item['companyId'],item['companyName'],item['alias'],item['historyNames'],item['legalPersonName'],item['phoneList'],item['emailList'],item['websiteList'],item['estiblishTime'],item['regNumber'],item['regCapital'],item['actualCapital'],item['creditCode'],item['taxNumber'],item['orgNumber'],item['taxQualification'],item['englishName'],item['regStatus'],item['staffNumRange'],item['socialStaffNum'],item['companyOrgType'],item['industry'],item['operatingPeriod'],item['regLocation'],item['approvedTime'],item['regInstitute'],item['logo'],item['portray'],item['updatetime'],item['businessScope'],item['intro'],item['base'],item['district'])
+        '''股东信息  tyc1_holderinfo'''
+        '''高管信息  tyc2_staffinfo'''
+        '''变更信息  tyc3_changeinfo'''
+        '''投资信息  tyc4_inverstinfo'''
+        '''年报信息  tyc5_reportinfo'''
+        '''开庭公告  tyc6_announcementinfo'''
+        '''开庭公告  tyc7_lawsuitinfo'''
+        # if not self.redis_pool.sismember("lawsuit", item['companyId']):
+        VALUES = (item['companyId'],item['allInfo'])
+        insert_sql = "INSERT INTO tyc7_lawsuitinfo(companyId,info) VALUES(%s,%s)"
+        if cursor.execute(insert_sql, VALUES):
+            # self.redis_pool.hset("companyInfo",item['companyId'],item['companyName'])
+            self.redis_pool.sadd("lawsuit",item['companyId'])
+            print(item['companyId'],"信息执行成功")
+        # else:
+        #     VALUES = (item['allInfo'],item['companyId'])
+        #     insert_sql = "UPDATE tyc7_lawsuitinfo SET info=concat(info,',',%s) WHERE companyId=%s"
+        #     if cursor.execute(insert_sql, VALUES):
+        #         print(item['companyId'],"信息更新成功")
+
+
 
     def handle_error(self,failue,item,spider):
         print('插入数据失败，原因：{}，错误对象：{}'.format(failue, item))

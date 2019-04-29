@@ -100,16 +100,16 @@ HTTPERROR_ALLOWED_CODES = [301,404,503]
 RETRY_HTTP_CODES = [302,401,408, 414, 500, 502, 504]
 #REDIS配置项
 #地址
-REDIS_HOST = '10.10.17.141'
+REDIS_HOST = '127.0.0.1'
 #端口
 REDIS_PORT = 6379
 #密码
 REDIS_PASSWORD=''
 #选择数据库
-REDIS_DB = 2
+REDIS_DB = 0
 #REDIS遍历数据设置
-# NAME = "personnames:0"
-NAME = "hasid"
+NAME = "allcount"
+# NAME = "hasid"
 #匹配规则
 PATTERN = None
 #每次获取的数量
@@ -117,7 +117,7 @@ COUNT = 100
 
 #MySQL配置项
 #地址
-MYSQL_HOST = '10.10.17.141'
+MYSQL_HOST = '127.0.0.1'
 #端口
 MYSQL_PORT = 3306
 #链接的用户名
